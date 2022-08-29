@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    {% block 'head' %} {% endblock %}
+    <title>{% block 'titulo' %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid bg-dark">
+            <span class="navbar-brand mb-0 h1" style="color:aliceblue; font-size: 32px;">{% block 'header'%}{% endblock %}</span>
+        </div>
+    </header>
+    
+    {% block 'conteudo' %} {% endblock %}
+
+    <footer class="navbar fixed-bottom bg-dark">
+        <div class="container-fluid">
+            <p class="navbar-brand" style="color:aliceblue; text-align: center; width: 100%;">Copyright | 2022</p>
+        </div>
+    </footer>
+   
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+  </body>
+</html>
