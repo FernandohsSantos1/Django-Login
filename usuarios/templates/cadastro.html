@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %}Cadastro{% endblock %}
+
+{% block 'header' %}Cadastro{% endblock %}
+
+{% block 'conteudo' %}
+  <style>
+      .titulo {
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 32px;
+      }
+
+      .formulario {
+        border: 1px solid black;
+        border-radius: 5px;
+        max-width: 600px;
+        width: 80%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin: 20px;
+        text-transform: capitalize;
+        position: relative;
+        left: -30%;                
+      }
+
+      .senha {
+        left: -25%; 
+      } 
+
+      input {
+        width: 70% ;
+      }
+
+      .botoes {
+        margin: 40px;
+      } 
+
+      .alert {
+        max-width: 600px;
+        width: 80%;
+        margin: 0 auto;
+      }
+  </style>  
+  
+
+<main style="text-align: center;">
+  <br>
+  {% if messages %}
+      {% for i in messages %}
+        <div class="alert {{i.tags}}" role="alert">
+          {{i}}
+        </div>
+      {% endfor %}
+  {% endif %}
+
+  <h1 class="titulo">Digite seus Dados:</h1>
+  
+  <form method="POST" action="{% url 'valida_cadastro'%}" class="formulario">{% csrf_token %}
+
+      
+      <label for="name">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha" id="senha" placeholder="********"required>
+      <label class="senha" for="senha">Confimar senha:</label>
+      <input type="password" name="con_senha" id="con_senha" placeholder="********"required>
+
+      <div class="botoes">
+          <button type="submit" class="btn btn-info btn-lg">Cadastrar</button>
+          <a href="{% url 'login' %}" class="btn btn-info btn-lg">Login</a>
+      </div>
+      
+  </form>
+</main>
+{% endblock %}
