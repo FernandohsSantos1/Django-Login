@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %}HOME-PAGE{% endblock %}
+
+{% block 'header' %}HOME{% endblock %}
+
+{% block 'conteudo' %}
+    <style>
+        main {
+            text-align: center;
+        }
+
+        .titulo {
+            margin-top: 20vh;
+        }
+
+        .btn {
+            margin-top: 20vh;
+            padding: 20px;
+            width: 120px
+        }
+    </style>
+
+    <main>
+        <h1 class="titulo">
+            Bem Vindo ao Sistema
+        </h1>
+        <a href="/auth/sair/" class="btn btn-danger btn-lg">SAIR</a>
+    </main>
+{% endblock %}
