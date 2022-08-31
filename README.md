@@ -15,3 +15,6 @@ Para o desenvolvimento foram colocados em prática o conceito de:
   - JavaScript
   - CSS
   - HTML
+
+**Como o objetivo era praticar, não foi utilizado o sistema de autenticação 
+contido no Django, o Django Auth.
