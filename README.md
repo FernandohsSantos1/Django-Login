@@ -10,11 +10,12 @@ Para o desenvolvimento foram colocados em prática o conceito de:
   - Django
   - Django Sessions
   - Django Admin
-  - Django mMessages
+  - Django Messages
   - BootStrap
   - JavaScript
   - CSS
   - HTML
+  - SQL
 
 **Como o objetivo era praticar, não foi utilizado o sistema de autenticação 
 contido no Django, o Django Auth.
